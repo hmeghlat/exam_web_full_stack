@@ -53,12 +53,16 @@ Accès API: `http://127.0.0.1:8000`
 
 ## 🔑 Variables d'environnement essentielles
 ```
-DATABASE_URL=mysql://user:pass@127.0.0.1:3306/exam?charset=utf8mb4
+
 JWT_SECRET_KEY=%kernel.project_dir%/config/jwt/private.pem
 JWT_PUBLIC_KEY=%kernel.project_dir%/config/jwt/public.pem
 JWT_PASSPHRASE=change_me
 APP_ENV=dev
+
+Creer un fichier .env.local est mettre ces deux ligne :
 APP_SECRET=ChangerCetteValeur
+DATABASE_URL=mysql://user:pass@127.0.0.1:3306/exam?charset=utf8mb4
+
 ```
 
 
