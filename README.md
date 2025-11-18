@@ -21,8 +21,7 @@ Version PHP requise: **>= 8.2**
 ## 🚀 Installation (Windows PowerShell)
 ```powershell
 # 1. Cloner
-git clone <votre_repo_url> exam
-cd exam
+git clone https://github.com/hmeghlat/exam_web_full_stack.git 
 
 # 2. Installer dépendances
 composer install
@@ -42,15 +41,13 @@ openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
 
 # 6. Créer la base et appliquer les migrations
 php bin/console doctrine:database:create
-php bin/console doctrine:migrations:migrate -n
+php bin/console doctrine:migrations:migrate
 
 # 7. (Optionnel) Charger des fixtures si ajoutées
-php bin/console doctrine:fixtures:load -n
+php bin/console doctrine:fixtures:load 
 
 # 8. Lancer le serveur de développement
-symfony server:start --no-tls
-# ou
-php -S 127.0.0.1:8000 -t public
+symfony server:start 
 ```
 Accès API: `http://127.0.0.1:8000`
 
@@ -64,13 +61,4 @@ APP_ENV=dev
 APP_SECRET=ChangerCetteValeur
 ```
 
-## 🛠 Commandes utiles
-```bash
-# Lister migrations
-php bin/console doctrine:migrations:list
-# Générer migration après changement entité
-php bin/console doctrine:migrations:diff
-# Vider cache
-php bin/console cache:clear
-```
 
